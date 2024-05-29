@@ -40,7 +40,7 @@ class UI(QMainWindow):
         for element in lista:
             item_name = QTableWidgetItem(element["nomeP"])
             self.table.setItem(riga,0, item_name)
-            colonna=colonna+1
+          
             
             item_name2 = QTableWidgetItem(element["nomeS"])
             self.table.setItem(riga,1, item_name2)
@@ -53,24 +53,7 @@ class UI(QMainWindow):
             
             
             
-        
-        
-        
-        
-        
-        
-       
-        
-
-
-       
-
-        
-        
-        
  
-
-
 app = QApplication(sys.argv)
 window = UI()
 app.exec_()
