@@ -30,20 +30,25 @@ class UI(QMainWindow):
     
  
     def clickedBtn (self):
-        lista= [{"Matteo","Picciolini",18},{"Daniele","Morelli",9},{"Samuele","Maranghi",18}]
+        lista=[{"nomeP":"Matteo","nomeS":"Picciolini","nOre":"5"},{"nomeP":"Andrea","nomeS":"Ricci","nOre":"10"},{"nomeP":"Samuele","nomeS":"Maranghi","nOre":"18"}]
+
         
         riga=0
         colonna=0
-        
-        variabile=-1
+      
         
         for element in lista:
-            
-            variabile=variabile+1
-            print(lista[variabile])
-            self.table.setItem(riga,colonna, lista[variabile])
-            riga=riga+1
+            item_name = QTableWidgetItem(element["nomeP"])
+            self.table.setItem(riga,0, item_name)
             colonna=colonna+1
+            
+            item_name2 = QTableWidgetItem(element["nomeS"])
+            self.table.setItem(riga,1, item_name2)
+           
+            item_name3 = QTableWidgetItem(element["nOre"])
+            self.table.setItem(riga,2, item_name3)
+            riga=riga+1
+            
             
             
             
