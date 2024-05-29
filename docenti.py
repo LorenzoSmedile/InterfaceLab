@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from PyQt5.QtWidgets import QMainWindow, QApplication, QPushButton ,QTableWidget,QTableWidgetItem
+from PyQt5.QtWidgets import QMainWindow, QApplication, QPushButton ,QTableWidget,QTableWidgetItem,QLineEdit
 from PyQt5 import uic
 import sys
  
@@ -26,28 +26,39 @@ class UI(QMainWindow):
         self.table.setHorizontalHeaderLabels(["Nome", "Cognome","Ore"])
         
         
+        self.line_Nome= self.findChild(QLineEdit,"nome")
+        self.line_Cognome= self.findChild(QLineEdit,"cognome")
+        self.line_Ore= self.findChild(QLineEdit,"numero")
+        
+        
         
     
  
     def clickedBtn (self):
-        lista=[{"nomeP":"Matteo","nomeS":"Picciolini","nOre":"5"},{"nomeP":"Andrea","nomeS":"Ricci","nOre":"10"},{"nomeP":"Samuele","nomeS":"Maranghi","nOre":"18"}]
+        lista=[{"nomeP":"Matteo","nomeS":"Picciolini","nOre":"5"},{"nomeP":"Claudio","nomeS":"Giammarioli","nOre":"10"},{"nomeP":"Samuele","nomeS":"Maranghi","nOre":"18"}]
 
         
         riga=0
-        colonna=0
+        
       
         
         for element in lista:
             item_name = QTableWidgetItem(element["nomeP"])
             self.table.setItem(riga,0, item_name)
-          
-            
+           
             item_name2 = QTableWidgetItem(element["nomeS"])
             self.table.setItem(riga,1, item_name2)
            
             item_name3 = QTableWidgetItem(element["nOre"])
             self.table.setItem(riga,2, item_name3)
             riga=riga+1
+       
+       
+          
+            
+            
+            
+            
             
             
             
