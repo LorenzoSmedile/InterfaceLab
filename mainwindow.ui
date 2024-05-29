@@ -50,7 +50,7 @@
      <string>Nome</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="nome">
     <property name="geometry">
      <rect>
       <x>310</x>
@@ -60,7 +60,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QLineEdit" name="cognome">
     <property name="geometry">
      <rect>
       <x>510</x>
@@ -70,7 +70,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_3">
+   <widget class="QLineEdit" name="numero">
     <property name="geometry">
      <rect>
       <x>310</x>
